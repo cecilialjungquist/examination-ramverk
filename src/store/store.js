@@ -1,1 +1,12 @@
 // Här ska vi göra själva storen configureStore
+
+import { configureStore } from '@reduxjs/toolkit'
+import moviesReducer from './slices/moviesSlice';
+
+const store = configureStore({
+  reducer: {
+    movies: moviesReducer
+  }
+});
+
+export { store };
