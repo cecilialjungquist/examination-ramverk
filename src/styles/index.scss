@@ -19,6 +19,7 @@ main {
     background-image: url(/joshua-hanks-SiZ00cmFnsg-unsplash.jpg);
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     min-height: 100vh;
     padding: $whiteSpace--big 0;
 }
@@ -33,6 +34,16 @@ nav {
 
 h1 {
     @include header--huge;
+}
+
+h2 {
+    @include heading;
+    border-bottom: 3px dotted $primaryPink;
+    width: 80vw;
+    padding: $whiteSpace--normal 0;
+    text-align: center;
+    margin: auto;
+    margin-top: $whiteSpace--big;
 }
 
 button {

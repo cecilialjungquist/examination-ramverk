@@ -1,9 +1,14 @@
 /* Colors */
 $primaryPink: rgb(243, 210, 210);
 
+$backgroundLight: rgba(255, 255, 255, 0.4);
+$backgroundDark: rgba(0, 0, 0, 0.6);
+
 $fontGrey: rgb(37, 37, 37);
+$fontWhite:rgb(231, 231, 231);
 
 $accentGreen: rgb(216, 255, 216);
+$alertRed: rgb(101, 19, 19);
 
 /* White space */
 $whiteSpace--normal: .5rem;
@@ -13,3 +18,4 @@ $whiteSpace--big: 1.5rem;
 /* Shadows */
 $textShadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 $btnShadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+$boxShadow: 0px 0px 12px rgba(0, 0, 0, 0.6);

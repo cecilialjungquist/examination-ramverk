@@ -1,0 +1,19 @@
+@import '../styles/index.scss';
+
+.all-movies {
+    .container {
+        margin-top: $whiteSpace--big;
+        @include flex-col-center;
+        gap: 2rem;
+    }
+}
+
+.movie {
+    
+    .loading {
+        @include message;
+        text-align: center;
+        color: $accentGreen;
+        margin-top: calc($whiteSpace--big * 3);
+    }
+}

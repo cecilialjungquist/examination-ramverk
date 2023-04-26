@@ -1,5 +1,9 @@
+@import '../styles/index.scss';
+
 article {
     max-width: 300px;
+    background-color: $backgroundLight;
+    box-shadow: $boxShadow;
 
     img {
         width: 100%;

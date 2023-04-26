@@ -1,22 +1,16 @@
+import { Link } from 'react-router-dom';
 import './MovieCard.scss';
 
-function MovieCard() {
-    const movie = {
-        id: 308,
-        title: "Pulp Fiction",
-        director: "Quentin Tarantino",
-        year: "1994",
-        img: "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
-        imdb: "https://www.imdb.com/title/tt0110912/",
-        rating: 5
-    }
+function MovieCard({ movie }) {
 
     return (  
         <article>
-            <figure>
-                <img src={movie.img} alt="Movie poster" />
-            </figure>
-            <h2>{movie.title}</h2>
+            <Link to={`/${movie.title}`} state={movie}>
+                <figure>
+                    <img src={movie.img} alt="Movie poster" />
+                </figure>
+            </Link>
+            <h3>{movie.title}</h3>
             <section>
                 <p>{movie.year}</p>
                 <p>{movie.director}</p>

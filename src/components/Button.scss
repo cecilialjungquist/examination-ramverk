@@ -7,3 +7,18 @@
     color: $fontGrey;
     font-weight: 700;
 }
+
+.edit,
+.delete {
+    padding: $whiteSpace--normal calc($whiteSpace--normal * 1.5);
+    box-shadow: $btnShadow;
+}
+
+.edit {
+    background-color: $accentGreen;
+    color: $fontGrey;
+}
+.delete {
+    background-color: $alertRed;
+    color: $fontWhite;
+}

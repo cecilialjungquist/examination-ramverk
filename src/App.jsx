@@ -19,6 +19,7 @@ function App() {
         dispatch(setAllMovies(data.movies));
       } catch (error) {
         console.log(error);
+        // Hantera felet bättre! Vad händer i UI?
       }
     }
     fetchData();
@@ -30,7 +31,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='home' element={<Home />} />
-          <Route path='all-movies' element={<AllMovies />} />
+          <Route path='all-movies' element={<AllMovies />}/>
           <Route path=':title' element={<Movie />} />
         </Route>
       </Routes>
