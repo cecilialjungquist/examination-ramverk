@@ -1,0 +1,31 @@
+{
+    "movies": [
+        {
+            "id": 308,
+            "title": "Pulp Fiction",
+            "director": "Quentin Tarantino",
+            "year": "1994",
+            "img": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+            "imdb": "https://www.imdb.com/title/tt0110912/",
+            "rating": 5
+        },
+        {
+            "id": 309,
+            "title": "Clockwork Orange",
+            "director": "Stanley Kubrick",
+            "year": "1971",
+            "img": "https://media.posterlounge.com/img/products/610000/606250/606250_poster_l.jpg",
+            "imdb": "https://www.imdb.com/title/tt0066921/",
+            "rating": 4
+        },
+        {
+            "id": 310,
+            "title": "Klaus",
+            "director": "Segio Pablos",
+            "year": "2019",
+            "img": "https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+            "imdb": "https://www.imdb.com/title/tt4729430/",
+            "rating": 4
+        }
+    ]
+}
