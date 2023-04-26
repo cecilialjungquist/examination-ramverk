@@ -32,7 +32,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='home' element={<Home />} />
           <Route path='all-movies' element={<AllMovies />}/>
-          <Route path=':title' element={<Movie />} />
+          <Route path=':id' element={<Movie />} />
         </Route>
       </Routes>
     </BrowserRouter>

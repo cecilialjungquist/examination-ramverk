@@ -5,7 +5,7 @@ function MovieCard({ movie }) {
 
     return (  
         <article>
-            <Link to={`/${movie.title}`} state={movie}>
+            <Link to={`/${movie.id}`} state={movie}>
                 <figure>
                     <img src={movie.img} alt="Movie poster" />
                 </figure>

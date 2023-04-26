@@ -15,12 +15,12 @@ export const moviesSlice = createSlice({
             console.log('Adding movie', action.payload);
         },
         deleteMovie: (state, action) => {
-            const index = state.findIndex(movie => movie.id = action.payload.id);
+            const index = state.findIndex(movie => movie.id === action.payload.id);
             console.log('Deleting movie', action.payload);
             state.splice(index, 1);
         },
         editMovie: (state, action) => {
-            const index = state.findIndex(movie => movie.id = action.payload.id);
+            const index = state.findIndex(movie => movie.id === action.payload.id);
             console.log('Editing movie', action.payload);
             state.splice(index, 1, action.payload);
         }

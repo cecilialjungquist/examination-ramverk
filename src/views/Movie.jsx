@@ -1,22 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from '../components/Button';
-import { deleteMovie } from "../store/slices/moviesSlice";
+import { deleteMovie, editMovie } from "../store/slices/moviesSlice";
+import EditMovie from "../components/EditMovie";
 
 function Movie() {
-    const title = useParams().title;
+    const id = parseInt(useParams().id);
     const movies = useSelector(state => state.movies);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const [ movie ] = movies.filter(movie => movie.title === title);
+    const [ movie ] = movies.filter(movie => movie.id === id);
 
     function handleDelete() {
         dispatch(deleteMovie(movie));
         navigate('/all-movies');
     }
     function handleEdit() {
-        console.log('edit')
+        console.log('edit');
+        // nu ska editMovie component visas
     }
 
 
@@ -34,6 +36,7 @@ function Movie() {
                         <Button children={'Edit'} type={'edit'} onClick={handleEdit}/>
                     </section> 
                 </section>
+                <EditMovie movie={movie} />
              </> :
              <p className="loading">Loading...</p> }
         </main>
