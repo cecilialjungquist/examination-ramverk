@@ -1,0 +1,41 @@
+@import './mixins';
+@import './variables';
+
+
+* {
+    @include reset;
+}
+
+body {
+    min-height: 100vh; 
+}
+
+#root {
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    background-image: url(/joshua-hanks-SiZ00cmFnsg-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    padding: $whiteSpace--big 0;
+}
+
+nav {
+    background-color: $primaryPink;
+    padding: $whiteSpace--normal;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+h1 {
+    @include header--huge;
+}
+
+button {
+    @include button;
+}
+

@@ -4,8 +4,25 @@ import Layout from './views/Layout';
 import Home from './views/Home';
 import AllMovies from './views/AllMovies';
 import Movie from './views/Movie';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { setAllMovies } from './store/slices/moviesSlice';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch('./data.json');
+        const data = await response.json();
+        dispatch(setAllMovies(data.movies));
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    fetchData();
+  }, [dispatch]);
 
   return (
     <BrowserRouter>

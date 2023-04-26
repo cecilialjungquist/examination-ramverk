@@ -1,0 +1,9 @@
+@import '../styles/index.scss';
+
+.primary {
+    padding: $whiteSpace--big calc($whiteSpace--big * 1.6);
+    background-color: $primaryPink;
+    box-shadow: $btnShadow;
+    color: $fontGrey;
+    font-weight: 700;
+}

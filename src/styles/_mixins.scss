@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,100;1,400&family=Limelight&display=swap');
+// font-family: 'Lato', sans-serif;
+// font-family: 'Limelight', cursive;
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin header--huge {
+    font-family: 'Limelight', cursive;
+    color: $primaryPink;
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+@mixin message {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+@mixin button {
+    appearance: none;
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+}
