@@ -1,7 +1,7 @@
 {
     "movies": [
         {
-            "id": 308,
+            "id": 0,
             "title": "Pulp Fiction",
             "director": "Quentin Tarantino",
             "year": "1994",
@@ -10,7 +10,7 @@
             "rating": 5
         },
         {
-            "id": 309,
+            "id": 1,
             "title": "Clockwork Orange",
             "director": "Stanley Kubrick",
             "year": "1971",
@@ -19,7 +19,7 @@
             "rating": 4
         },
         {
-            "id": 310,
+            "id": 2,
             "title": "Klaus",
             "director": "Sergio Pablos",
             "year": "2019",

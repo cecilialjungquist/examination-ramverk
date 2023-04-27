@@ -32,10 +32,10 @@ function EditMovie({ movie, setShowEdit }) {
             <h4>Edit Movie</h4>
             {/* <form> */}
             <Input
-                name={'title'}
+                name={'img'}
                 type={'text'}
                 handleChange={handleChange}
-                value={values.title}
+                value={values.img}
             />
             <Input
                 name={'rating'}

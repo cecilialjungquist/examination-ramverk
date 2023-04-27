@@ -1,15 +1,15 @@
 import './views.scss'
 import { useState } from "react";
-import { nanoid } from "@reduxjs/toolkit";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addMovie } from '../store/slices/moviesSlice';
 
 function AddMovie() {
     const dispatch = useDispatch();
+    const newId = useSelector(state => state.movies.length);
     const [newMovie, setNewMovie] = useState({
-        id: nanoid(), 
+        id: newId, 
         title: '', 
         director: '', 
         year: '', 
