@@ -46,7 +46,44 @@ h2 {
     margin-top: $whiteSpace--big;
 }
 
+h3 {
+    @include heading;
+    font-size: 1.4rem;
+    margin: $whiteSpace--normal 0;
+}
+
+h4 {
+    text-transform: uppercase;
+    color: $accentGreen;
+    text-align: center;
+    margin: $whiteSpace--normal 0 $whiteSpace--big;
+    text-shadow: $textShadow;
+    letter-spacing: 1px
+}
+
+p {
+    @include contentText;
+}
+
 button {
     @include button;
 }
 
+label {
+    color: $primaryPink;
+    text-shadow: $textShadow;
+}
+
+input {
+    appearance: 0;
+    border: none;
+    padding: $whiteSpace--normal;
+    margin: $whiteSpace--normal;
+    background-color: $backgroundLight;
+    border-radius: 4px;
+    caret-color: $primaryPink;
+}
+
+input:focus {
+    outline: none;
+}

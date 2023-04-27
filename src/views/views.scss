@@ -9,11 +9,38 @@
 }
 
 .movie {
+
+    .info {
+        @include flex-col-center;
+        gap: 1rem;
+        padding-top: $whiteSpace--big;
+        font-weight: 700;
+        text-shadow: $textShadow;
+
+        section {
+            display: flex;
+            gap: 2rem;
+        }
+
+        span {
+            color: $fontWhite;
+            font-weight: 400;
+        }
+
+    }
     
     .loading {
         @include message;
         text-align: center;
         color: $accentGreen;
         margin-top: calc($whiteSpace--big * 3);
+    }
+
+    .btn-container {
+        @include flex-col-center;
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        right: 0;
     }
 }

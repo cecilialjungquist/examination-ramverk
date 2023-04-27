@@ -4,8 +4,24 @@ article {
     max-width: 300px;
     background-color: $backgroundLight;
     box-shadow: $boxShadow;
+    text-align: center;
+    padding: $whiteSpace--normal;
+    text-shadow: $textShadow;
+
+    section {
+        padding-bottom: $whiteSpace--normal;
+    }
 
     img {
         width: 100%;
+    }
+
+    em {
+        font-style: normal;
+        margin-right: $whiteSpace--normal;
+    }
+
+    a {
+        color: $primaryPink;
     }
 }

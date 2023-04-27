@@ -14,9 +14,9 @@ function MovieCard({ movie }) {
             <section>
                 <p>{movie.year}</p>
                 <p>{movie.director}</p>
-                <p>{movie.rating}</p>
-                <a href={movie.imdb} target="_blank">Link to IMDB</a>
+                <p> <em>&#9733;</em> {movie.rating}</p>
             </section>
+                <a href={movie.imdb} target="_blank">Link to IMDB</a>
         </article>
     );
 }

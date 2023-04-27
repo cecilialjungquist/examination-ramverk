@@ -1,0 +1,10 @@
+@import '../styles/index.scss';
+
+.edit-movie {
+    @include flex-col-center;
+    margin-top: $whiteSpace--big;
+
+    button {
+        margin-top: $whiteSpace--big;
+    }
+}

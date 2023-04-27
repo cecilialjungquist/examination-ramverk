@@ -1,8 +1,10 @@
+import './EditMovie.scss';
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editMovie } from "../store/slices/moviesSlice";
+import Button from './Button';
 
-function EditMovie({ movie }) {
+function EditMovie({ movie, setShowEdit }) {
     const [values, setValues] = useState(movie);
     const dispatch = useDispatch();
 
@@ -18,11 +20,12 @@ function EditMovie({ movie }) {
     function handleClick(event) {
         event.preventDefault();
         dispatch(editMovie(values));
+        setShowEdit(prevstate => !prevstate);
     }
 
     return (  
-        <section>
-            <h3>Edit Movie</h3>
+        <section className="edit-movie">
+            <h4>Edit Movie</h4>
             {/* <form> */}
                 <label>Title</label>
                 <input 
@@ -31,7 +34,14 @@ function EditMovie({ movie }) {
                     name='title'
                     value={values.title}
                 />
-                <button onClick={handleClick}>Save</button>
+                <label>My Rating</label>
+                <input 
+                    type="text"                 
+                    onChange={handleChange}
+                    name='rating'
+                    value={values.rating}
+                />
+                <Button children={'Save'} type={'primary'} onClick={handleClick}/>
             {/* </form> */}
         </section>
     );

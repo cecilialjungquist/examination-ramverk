@@ -25,6 +25,10 @@
     font-size: 4rem;
 }
 
+@mixin contentText {
+    color: $accentGreen;
+    line-height: 140%;
+}
 
 @mixin message {
     font-style: italic;
