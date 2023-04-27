@@ -1,0 +1,14 @@
+@import '../styles/index.scss';
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 250px;
+    margin: auto;
+
+    label {
+        text-transform: capitalize;
+        color: $accentGreen;
+    }
+}

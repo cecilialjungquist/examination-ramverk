@@ -9,7 +9,9 @@ function Hero() {
             <h1>Cinema</h1>
             <p>Created simply for movie lovers</p>
             <Link to='/all-movies'>
-                <Button children={'Start browsing!'} type={'primary'} />
+                <div className='primary-btn-container'>
+                    <Button children={'Start browsing!'} type={'primary'} />
+                </div>
             </Link>
         </section>
     );

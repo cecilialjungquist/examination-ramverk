@@ -4,6 +4,7 @@ import Layout from './views/Layout';
 import Home from './views/Home';
 import AllMovies from './views/AllMovies';
 import Movie from './views/Movie';
+import AddMovie from './views/AddMovie'
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAllMovies } from './store/slices/moviesSlice';
@@ -32,6 +33,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='home' element={<Home />} />
           <Route path='all-movies' element={<AllMovies />}/>
+          <Route path='add-movie' element={<AddMovie />} />
           <Route path=':id' element={<Movie />} />
         </Route>
       </Routes>

@@ -2,11 +2,11 @@
 
 .hero {
     @include flex-col-center;
-    min-height: 100vh;
+    min-height: 90vh;
 
     h1 {
         text-shadow: $textShadow;
-        margin-bottom: 0;
+        margin-bottom: $whiteSpace--big;
     }
 
     p {

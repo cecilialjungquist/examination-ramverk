@@ -1,6 +1,7 @@
 @import './mixins';
 @import './variables';
 
+/* HTML tag name*/
 
 * {
     @include reset;
@@ -25,7 +26,10 @@ main {
 }
 
 nav {
+    display: flex;
+    justify-content: space-around;
     background-color: $primaryPink;
+    color: $fontGrey;
     padding: $whiteSpace--normal;
     position: absolute;
     left: 0;
@@ -75,15 +79,26 @@ label {
 }
 
 input {
-    appearance: 0;
+    appearance: none;
     border: none;
     padding: $whiteSpace--normal;
     margin: $whiteSpace--normal;
     background-color: $backgroundLight;
     border-radius: 4px;
     caret-color: $primaryPink;
+    color: $fontGrey;
 }
 
 input:focus {
     outline: none;
+}
+
+/* Class name */
+
+.primary-btn-container {
+    @include flex-col-center;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
 }

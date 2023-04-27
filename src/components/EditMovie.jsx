@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editMovie } from "../store/slices/moviesSlice";
 import Button from './Button';
+import Input from './Input';
 
 function EditMovie({ movie, setShowEdit }) {
     const [values, setValues] = useState(movie);
     const dispatch = useDispatch();
 
     function handleChange(event) {
-        console.log(event.target.value);
         setValues(prevValues => {
             return {
                 ...prevValues,
@@ -17,31 +17,36 @@ function EditMovie({ movie, setShowEdit }) {
             }
         })
     }
-    function handleClick(event) {
+    function handleSave(event) {
         event.preventDefault();
         dispatch(editMovie(values));
         setShowEdit(prevstate => !prevstate);
     }
+    function handleCancel(event) {
+        event.preventDefault();
+        setShowEdit(prevstate => !prevstate);
+    }
 
-    return (  
+    return (
         <section className="edit-movie">
             <h4>Edit Movie</h4>
             {/* <form> */}
-                <label>Title</label>
-                <input 
-                    type="text"                 
-                    onChange={handleChange}
-                    name='title'
-                    value={values.title}
-                />
-                <label>My Rating</label>
-                <input 
-                    type="text"                 
-                    onChange={handleChange}
-                    name='rating'
-                    value={values.rating}
-                />
-                <Button children={'Save'} type={'primary'} onClick={handleClick}/>
+            <Input
+                name={'title'}
+                type={'text'}
+                handleChange={handleChange}
+                value={values.title}
+            />
+            <Input
+                name={'rating'}
+                type={'number'}
+                handleChange={handleChange}
+                value={values.rating}
+            />
+            <section className='btn-section'>
+                <Button children={'Cancel'} type={'delete'} onClick={handleCancel} />
+                <Button children={'Save'} type={'edit'} onClick={handleSave} />
+            </section>
             {/* </form> */}
         </section>
     );

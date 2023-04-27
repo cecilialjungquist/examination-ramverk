@@ -21,6 +21,9 @@ function Movie() {
     function handleEdit() {
         setShowEdit(prevState => !prevState);
     }
+    function goBack(){
+        navigate(-1);
+    }
 
 
     // Fixa denna snyggare
@@ -34,7 +37,7 @@ function Movie() {
                         <p><span>Director:</span> {movie.director}</p>
                         <p><span>Year:</span> {movie.year}</p>
                         <p><span>My Rating:</span> {movie.rating}</p>
-                        <section>
+                        <section className="btn-section">
                             <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
                             <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
                         </section>
@@ -47,8 +50,8 @@ function Movie() {
                 <EditMovie movie={movie} setShowEdit={setShowEdit} />
             }
             {!showEdit &&
-                <div className="btn-container">
-                    <Button children={'Take me back'} type={'primary'} />
+                <div className="primary-btn-container">
+                    <Button children={'Take me back'} type={'primary'} onClick={goBack}/>
                 </div>
             }
         </main>

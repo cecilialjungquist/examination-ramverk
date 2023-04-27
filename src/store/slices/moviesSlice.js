@@ -11,7 +11,7 @@ export const moviesSlice = createSlice({
             return action.payload;
         },
         addMovie: (state, action) => {
-            state.push(action.payload);
+            state.unshift(action.payload);
             console.log('Adding movie', action.payload);
         },
         deleteMovie: (state, action) => {
