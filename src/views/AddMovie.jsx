@@ -34,6 +34,7 @@ function AddMovie() {
     return (
         <main className="add-movie">
             <h2>Add Movie</h2>
+            <p className='message'>Watched a good movie recently? Add it here!</p>
             <section>
                 <form>
                     <Input 

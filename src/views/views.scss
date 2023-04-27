@@ -30,8 +30,6 @@
     
     .loading {
         @include message;
-        text-align: center;
-        color: $accentGreen;
         margin-top: calc($whiteSpace--big * 3);
     }
 }

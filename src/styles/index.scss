@@ -102,3 +102,12 @@ input:focus {
     left: 0;
     right: 0;
 }
+
+.message {
+    @include message;
+    font-size: 1rem;
+    width: 200px;
+    margin: auto;
+    text-shadow: $textShadow;
+    margin-top: $whiteSpace--normal;
+}
