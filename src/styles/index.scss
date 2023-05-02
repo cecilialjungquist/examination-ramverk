@@ -88,10 +88,11 @@ input {
     border-radius: 4px;
     caret-color: $primaryPink;
     color: $fontGrey;
-}
 
-input:focus {
-    outline: none;
+    &:focus {
+        outline: none;
+    }
+    
 }
 
 /* Class name */
