@@ -4,10 +4,13 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import { useDispatch, useSelector } from 'react-redux';
 import { addMovie } from '../store/slices/moviesSlice';
+import { useNavigate } from 'react-router-dom';
 
 function AddMovie() {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const newId = useSelector(state => state.movies.length);
+    const [message, setMessage] = useState('Watched a good movie recently? Add it here!');
     const [newMovie, setNewMovie] = useState({
         id: newId, 
         title: '', 
@@ -28,13 +31,21 @@ function AddMovie() {
     };
     function handleClick(event) {
         event.preventDefault();
-        dispatch(addMovie(newMovie));
+        if (newMovie.title 
+            && newMovie.director 
+            && newMovie.year 
+            && newMovie.rating) {
+            dispatch(addMovie(newMovie));
+            navigate('/all-movies');
+        } else {
+            setMessage('To add a movie, please fill out title, director, year and rating.');
+        }
     }
 
     return (
         <main className="add-movie">
             <h2>Add Movie</h2>
-            <p className='message'>Watched a good movie recently? Add it here!</p>
+            <p className='message'>{message}</p>
             <section>
                 <form>
                     <Input 
