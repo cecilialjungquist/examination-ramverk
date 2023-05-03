@@ -10,7 +10,6 @@ function MovieCard({ movie }) {
         try {
             checkedSrc = new URL(src);
         } catch (error) {
-            console.log("Broken link", error);
             if (isImage) {
                 return defaultImage;
             } else {

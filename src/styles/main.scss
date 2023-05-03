@@ -1,4 +1,4 @@
-@import '../styles/base';
+@import './base';
 
 @import '../components/Button';
 @import '../components/EditMovie';
@@ -7,3 +7,5 @@
 @import '../components/MovieCard';
 
 @import '../views/views';
+
+@import './mediaQueries';

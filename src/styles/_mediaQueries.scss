@@ -1,0 +1,36 @@
+@import './mixins';
+@import './variables';
+
+@media screen and (min-width: 768px) {
+
+    nav {
+        justify-content: flex-end;
+        gap: 2rem;
+        padding-right: 10vw;
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        width: 50vw;
+    }
+    
+    .primary-btn-container {
+        position: relative;
+        bottom: 0rem;
+        margin-top: $whiteSpace--big;
+    }
+
+    .all-movies {
+        .container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            article {
+                padding: $whiteSpace--big;
+            }
+        }
+    }
+}
