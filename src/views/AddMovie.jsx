@@ -1,4 +1,4 @@
-import './views.scss'
+import './_views.scss';
 import { useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";

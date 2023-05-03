@@ -1,4 +1,4 @@
-import './EditMovie.scss';
+import './_EditMovie.scss';
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { editMovie } from "../store/slices/moviesSlice";

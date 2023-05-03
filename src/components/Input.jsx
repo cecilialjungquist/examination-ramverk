@@ -1,4 +1,4 @@
-import './Input.scss';
+import './_Input.scss';
 
 function Input({ name, type, handleChange, value }) {
     let label = name;

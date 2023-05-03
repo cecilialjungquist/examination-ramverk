@@ -1,4 +1,4 @@
-import './views.scss';
+import './_views.scss';
 import MovieCard from "../components/MovieCard";
 import { useSelector } from 'react-redux';
 
