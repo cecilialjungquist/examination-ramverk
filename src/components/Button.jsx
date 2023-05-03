@@ -1,4 +1,4 @@
-import './Button.scss';
+// import './_Button.scss';
 
 function Button({ children, type, onClick }) {
     // children: text inside button (string)
