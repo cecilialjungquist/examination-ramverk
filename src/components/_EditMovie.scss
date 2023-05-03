@@ -1,4 +1,5 @@
-@import '../styles/_base';
+@import '../styles/mixins';
+@import '../styles/variables';
 
 .edit-movie {
     margin-top: $whiteSpace--big;

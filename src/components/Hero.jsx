@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Button from './Button';
-// import './_Hero.scss';
+import './_Hero.scss';
 
 function Hero() {
 
