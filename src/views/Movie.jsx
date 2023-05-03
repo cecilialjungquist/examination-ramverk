@@ -1,18 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import Button from '../components/Button';
 import { deleteMovie } from "../store/slices/moviesSlice";
-import EditMovie from "../components/EditMovie";
 import { useState } from "react";
+import Button from '../components/Button';
+import EditMovie from "../components/EditMovie";
 
 function Movie() {
-    const id = parseInt(useParams().id);
+    const id = useParams().id;
     const movies = useSelector(state => state.movies);
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [showEdit, setShowEdit] = useState(false);
 
-    const [movie] = movies.filter(movie => movie.id === id);
+    const [movie] = movies.filter(movie => movie.id.toString() === id);
 
     function handleDelete() {
         dispatch(deleteMovie(movie));

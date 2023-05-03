@@ -2,17 +2,17 @@ import './_views.scss';
 import { useState } from "react";
 import Input from "../components/Input";
 import Button from "../components/Button";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addMovie } from '../store/slices/moviesSlice';
 import { useNavigate } from 'react-router-dom';
+import { nanoid } from '@reduxjs/toolkit';
 
 function AddMovie() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const newId = useSelector(state => state.movies.length);
     const [message, setMessage] = useState('Watched a good movie recently? Add it here!');
     const [newMovie, setNewMovie] = useState({
-        id: newId, 
+        id: nanoid(), 
         title: '', 
         director: '', 
         year: '', 
