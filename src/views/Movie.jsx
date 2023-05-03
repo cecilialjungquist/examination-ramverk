@@ -29,9 +29,9 @@ function Movie() {
     // Fixa denna snyggare
     return (
         <main className="movie">
-            {!movie && <p className="loading">Loading...</p>}
-            {movie &&  <h2>{movie.title}</h2> }
-            {movie && !showEdit &&
+            {movie ? <h2>{movie.title}</h2> : <p className="loading">Loading...</p>}
+            {movie && 
+                !showEdit &&
                 <>
                     <section className="info">
                         <p><span>Director:</span> {movie.director}</p>
@@ -49,6 +49,7 @@ function Movie() {
                 showEdit &&
                 <EditMovie movie={movie} setShowEdit={setShowEdit} />
             }
+            
             {!showEdit &&
                 <div className="primary-btn-container">
                     <Button children={'Take me back'} type={'primary'} onClick={goBack}/>
