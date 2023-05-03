@@ -14,7 +14,7 @@
             "title": "Clockwork Orange",
             "director": "Stanley Kubrick",
             "year": "1971",
-            "img": "https://media.posterlounge.com/img/products/610000/606250/606250_poster_l.jpg",
+            "img": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_FMjpg_UX1000_.jpg",
             "imdb": "https://www.imdb.com/title/tt0066921/",
             "rating": 4
         },
@@ -25,6 +25,15 @@
             "year": "2019",
             "img": "https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
             "imdb": "https://www.imdb.com/title/tt4729430/",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "title": "Fantastic Mr. Fox",
+            "director": "Wes Anderson",
+            "year": "2009",
+            "img": "https://m.media-amazon.com/images/M/MV5BOGUwYTU4NGEtNDM4MS00NDRjLTkwNmQtOTkwMWMyMjhmMjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+            "imdb": "https://www.imdb.com/title/tt0432283/",
             "rating": 4
         }
     ]
