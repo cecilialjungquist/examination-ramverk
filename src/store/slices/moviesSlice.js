@@ -23,10 +23,19 @@ export const moviesSlice = createSlice({
             const index = state.findIndex(movie => movie.id === action.payload.id);
             console.log('Editing movie', action.payload);
             state.splice(index, 1, action.payload);
+        },
+        addMovieComment: (state, action) => {
+            const index = state.findIndex(movie => movie.id === action.payload.id);
+            state[index].comments.unshift(action.payload.newComment);
+            console.log('Adding comment', action.payload.newComment);
+        },
+        deleteMovieComment: (state, action) => {
+            const index = state.findIndex(movie => movie.id === action.payload.id);
+            console.log('Deleting comment', action.payload.newComment);
         }
     }
 })
 
-export const { setAllMovies, getMovie, addMovie, deleteMovie, editMovie } = moviesSlice.actions;
+export const { setAllMovies, addMovie, deleteMovie, editMovie, addMovieComment, deleteMovieComment } = moviesSlice.actions;
 
 export default moviesSlice.reducer;

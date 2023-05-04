@@ -53,6 +53,7 @@ h2 {
 
 h3 {
     @include heading;
+    text-align: center;
     font-size: 1.4rem;
     margin: $whiteSpace--normal 0;
 }

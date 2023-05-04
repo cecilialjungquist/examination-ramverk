@@ -19,6 +19,10 @@
         font-weight: 700;
         text-shadow: $textShadow;
 
+        h3 {
+            margin-top: $whiteSpace--big;
+        }
+
         .btn-section {
             @include btn-section;
         }
