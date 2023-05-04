@@ -99,7 +99,7 @@ input {
 
 .primary-btn-container {
     @include flex-col-center;
-    position: absolute;
+    position: fixed;
     bottom: 1rem;
     left: 0;
     right: 0;

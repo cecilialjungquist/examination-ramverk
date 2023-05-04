@@ -10,6 +10,7 @@
 }
 
 .movie {
+    padding: $whiteSpace--big 0 $whiteSpace--big * 4;
 
     .info {
         @include flex-col-center;
@@ -36,6 +37,8 @@
 }
 
 .add-movie {
+    padding: $whiteSpace--big 0 $whiteSpace--big * 4;
+
     form, button {
         margin: $whiteSpace--big 0;
     }

@@ -4,17 +4,13 @@ import defaultImage from '../assets/movieposter.svg';
 
 function MovieCard({ movie }) {
 
-    // Check if link is ok
-    function checkSrc(src, isImage) {
+    // Check if img source is ok
+    function checkSrc(src) {
         let checkedSrc;
         try {
             checkedSrc = new URL(src);
         } catch (error) {
-            if (isImage) {
-                return defaultImage;
-            } else {
-                return 'https://www.imdb.com/';
-            }
+            return defaultImage;
         }
         return src;
     }
@@ -23,7 +19,7 @@ function MovieCard({ movie }) {
         <article className='movie-card'>
             <figure>
                 <Link to={`/${movie.id}`} state={movie}>
-                    <img src={checkSrc(movie.img, true)} alt="Movie poster" />
+                    <img src={checkSrc(movie.img)} alt="Movie poster" />
                 </Link>
             </figure>
             <section className='content'>
@@ -32,8 +28,8 @@ function MovieCard({ movie }) {
                     <p>{movie.year}</p>
                     <p>{movie.director}</p>
                     <p> <em>&#9733;</em> {movie.rating}</p>
+                    <p>Comments: {movie.comments.length}</p>
                 </section>
-                <a href={checkSrc(movie.imdb)} target="_blank">Link to IMDB</a>
             </section>
         </article>
     );

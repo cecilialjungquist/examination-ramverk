@@ -4,6 +4,7 @@ import { deleteMovie } from "../store/slices/moviesSlice";
 import { useState } from "react";
 import Button from '../components/Button';
 import EditMovie from "../components/EditMovie";
+import Comment from "../components/Comment";
 
 function Movie() {
     const id = useParams().id;
@@ -13,6 +14,13 @@ function Movie() {
     const [showEdit, setShowEdit] = useState(false);
 
     const [movie] = movies.filter(movie => movie.id.toString() === id);
+    let comments;
+
+    if (movie) {
+        // Fixa id här på ett bättre sätt
+        comments = movie.comments.map(comment => <Comment comment={comment} key={movie.id + Math.random()} />);
+        console.log(comments)
+    }
 
     function handleDelete() {
         dispatch(deleteMovie(movie));
@@ -38,6 +46,10 @@ function Movie() {
                                 <p><span>Director:</span> {movie.director}</p>
                                 <p><span>Year:</span> {movie.year}</p>
                                 <p><span>My Rating:</span> {movie.rating}</p>
+                                <section>
+                                    <h4>Comments:</h4>
+                                    {comments}
+                                </section>
                                 <section className="btn-section">
                                     <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
                                     <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
@@ -45,7 +57,7 @@ function Movie() {
                             </section>
                         </>
                     }
-                </> : 
+                </> :
                 <p className="loading">Loading...</p>
             }
 
