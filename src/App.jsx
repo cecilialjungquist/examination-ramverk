@@ -1,10 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-// import './App.css';
 import Layout from './views/Layout';
 import Home from './views/Home';
 import AllMovies from './views/AllMovies';
 import Movie from './views/Movie';
-import AddMovie from './views/AddMovie'
+import AddMovie from './views/AddMovie';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setAllMovies } from './store/slices/moviesSlice';
@@ -20,7 +19,6 @@ function App() {
         dispatch(setAllMovies(data.movies));
       } catch (error) {
         console.log(error);
-        // Hantera felet bättre! Vad händer i UI?
       }
     }
     fetchData();

@@ -7,7 +7,7 @@ function Hero() {
     return (  
         <section className="hero">
             <h1>Cinema</h1>
-            <p>Created simply for movie lovers</p>
+            <p>Created by movie lovers, for movie lovers</p>
             <Link to='/all-movies'>
                 <div className='primary-btn-container'>
                     <Button children={'Start browsing!'} type={'primary'} />
