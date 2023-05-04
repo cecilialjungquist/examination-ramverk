@@ -18,6 +18,16 @@
         padding-top: $whiteSpace--big;
         font-weight: 700;
         text-shadow: $textShadow;
+        text-align: center;
+
+        .year-movie-rating {
+            p {
+                display: flex;
+                justify-content: space-between;
+                gap: $whiteSpace--big;
+                text-shadow: $textShadow;
+            }
+        }
 
         h3 {
             margin-top: $whiteSpace--big;
@@ -30,6 +40,7 @@
         span {
             color: $fontWhite;
             font-weight: 400;
+            margin-right: $whiteSpace--normal;
         }
 
         .comment {
@@ -49,7 +60,7 @@
     
     .loading {
         @include message;
-        margin-top: calc($whiteSpace--big * 3);
+        margin-top:$whiteSpace--big * 3;
     }
 }
 

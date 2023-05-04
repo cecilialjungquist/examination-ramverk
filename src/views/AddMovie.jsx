@@ -6,18 +6,19 @@ import { useDispatch } from 'react-redux';
 import { addMovie } from '../store/slices/moviesSlice';
 import { useNavigate } from 'react-router-dom';
 import { nanoid } from '@reduxjs/toolkit';
+import Textarea from '../components/Textarea';
 
 function AddMovie() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [message, setMessage] = useState('Watched a good movie recently? Add it here!');
     const [newMovie, setNewMovie] = useState({
-        id: nanoid(), 
-        title: '', 
-        director: '', 
-        year: '', 
-        img: '', 
-        imdb: '', 
+        id: nanoid(),
+        title: '',
+        director: '',
+        year: '',
+        img: '',
+        comment: '',
         rating: ''
     });
 
@@ -31,9 +32,9 @@ function AddMovie() {
     };
     function handleClick(event) {
         event.preventDefault();
-        if (newMovie.title 
-            && newMovie.director 
-            && newMovie.year 
+        if (newMovie.title
+            && newMovie.director
+            && newMovie.year
             && newMovie.rating) {
             dispatch(addMovie(newMovie));
             navigate('/all-movies');
@@ -48,41 +49,40 @@ function AddMovie() {
             <p className='message'>{message}</p>
             <section>
                 <form>
-                    <Input 
-                        name={'title'} 
-                        type={'text'} 
+                    <Input
+                        name={'title'}
+                        type={'text'}
                         handleChange={handleChange}
                         value={newMovie.title}
                     />
-                    <Input 
-                        name={'director'} 
-                        type={'text'} 
+                    <Input
+                        name={'director'}
+                        type={'text'}
                         handleChange={handleChange}
                         value={newMovie.director}
                     />
-                    <Input 
-                        name={'year'} 
-                        type={'number'} 
+                    <Input
+                        name={'year'}
+                        type={'number'}
                         handleChange={handleChange}
                         value={newMovie.year}
                     />
-                    <Input 
-                        name={'img'} 
-                        type={'url'} 
+                    <Input
+                        name={'img'}
+                        type={'url'}
                         handleChange={handleChange}
                         value={newMovie.img}
                     />
-                    <Input 
-                        name={'imdb'} 
-                        type={'url'} 
-                        handleChange={handleChange}
-                        value={newMovie.imdb}
-                    />
-                    <Input 
-                        name={'rating'} 
-                        type={'number'} 
+                    <Input
+                        name={'rating'}
+                        type={'number'}
                         handleChange={handleChange}
                         value={newMovie.rating}
+                    />
+                    <Textarea
+                        name={'comment'}
+                        handleChange={handleChange}
+                        value={newMovie.comment}
                     />
                 </form>
                 <div className='primary-btn-container'>
