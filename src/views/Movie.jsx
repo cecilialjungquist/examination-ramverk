@@ -21,38 +21,37 @@ function Movie() {
     function handleEdit() {
         setShowEdit(prevState => !prevState);
     }
-    function goBack(){
+    function goBack() {
         navigate(-1);
     }
 
-
-    // Fixa denna snyggare
     return (
         <main className="movie">
-            {movie ? <h2>{movie.title}</h2> : <p className="loading">Loading...</p>}
-            {movie && 
-                !showEdit &&
+            {movie ?
                 <>
-                    <section className="info">
-                        <p><span>Director:</span> {movie.director}</p>
-                        <p><span>Year:</span> {movie.year}</p>
-                        <p><span>My Rating:</span> {movie.rating}</p>
-                        <section className="btn-section">
-                            <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
-                            <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
-                        </section>
-                    </section>
-                </> 
+                    <h2>{movie.title}</h2>
+
+                    {showEdit ?
+                        <EditMovie movie={movie} setShowEdit={setShowEdit} /> :
+                        <>
+                            <section className="info">
+                                <p><span>Director:</span> {movie.director}</p>
+                                <p><span>Year:</span> {movie.year}</p>
+                                <p><span>My Rating:</span> {movie.rating}</p>
+                                <section className="btn-section">
+                                    <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
+                                    <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
+                                </section>
+                            </section>
+                        </>
+                    }
+                </> : 
+                <p className="loading">Loading...</p>
             }
 
-            {movie &&
-                showEdit &&
-                <EditMovie movie={movie} setShowEdit={setShowEdit} />
-            }
-            
             {!showEdit &&
                 <div className="primary-btn-container">
-                    <Button children={'Take me back'} type={'primary'} onClick={goBack}/>
+                    <Button children={'Take me back'} type={'primary'} onClick={goBack} />
                 </div>
             }
         </main>
