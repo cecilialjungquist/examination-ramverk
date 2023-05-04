@@ -10,6 +10,7 @@
 }
 
 .movie {
+    padding: $whiteSpace--big 0 $whiteSpace--big * 4;
 
     .info {
         @include flex-col-center;
@@ -17,6 +18,20 @@
         padding-top: $whiteSpace--big;
         font-weight: 700;
         text-shadow: $textShadow;
+        text-align: center;
+
+        .year-movie-rating {
+            p {
+                display: flex;
+                justify-content: space-between;
+                gap: $whiteSpace--big;
+                text-shadow: $textShadow;
+            }
+        }
+
+        h3 {
+            margin-top: $whiteSpace--big;
+        }
 
         .btn-section {
             @include btn-section;
@@ -25,17 +40,33 @@
         span {
             color: $fontWhite;
             font-weight: 400;
+            margin-right: $whiteSpace--normal;
+        }
+
+        .comment {
+            max-width: 30rem;
+            padding: $whiteSpace--normal;
+
+            p {
+                @include message;
+                background-color: $backgroundDark;
+                padding: $whiteSpace--normal;
+                font-size: 1rem;
+            }
+
         }
 
     }
     
     .loading {
         @include message;
-        margin-top: calc($whiteSpace--big * 3);
+        margin-top:$whiteSpace--big * 3;
     }
 }
 
 .add-movie {
+    padding: $whiteSpace--big 0 $whiteSpace--big * 4;
+
     form, button {
         margin: $whiteSpace--big 0;
     }

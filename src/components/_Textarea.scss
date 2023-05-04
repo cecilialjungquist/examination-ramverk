@@ -1,0 +1,19 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+
+.textarea-container {
+    @include flex-col-center;
+
+    textarea {
+        width: 96vw;
+        max-width: 30rem;
+        min-height: 5rem;
+        resize: none;
+
+        &::placeholder {
+            color: $fontWhite;
+        }
+
+    }
+}

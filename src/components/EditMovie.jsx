@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { editMovie } from "../store/slices/moviesSlice";
 import Button from './Button';
 import Input from './Input';
+import Textarea from './Textarea';
 
 function EditMovie({ movie, setShowEdit }) {
     const [values, setValues] = useState(movie);
@@ -30,7 +31,6 @@ function EditMovie({ movie, setShowEdit }) {
     return (
         <section className="edit-movie">
             <h4>Edit Movie</h4>
-            {/* <form> */}
             <Input
                 name={'img'}
                 type={'text'}
@@ -43,11 +43,15 @@ function EditMovie({ movie, setShowEdit }) {
                 handleChange={handleChange}
                 value={values.rating}
             />
+            <Textarea
+                name="comment"
+                handleChange={handleChange}
+                value={values.comment}
+            />
             <section className='btn-section'>
                 <Button children={'Cancel'} type={'delete'} onClick={handleCancel} />
                 <Button children={'Save'} type={'edit'} onClick={handleSave} />
             </section>
-            {/* </form> */}
         </section>
     );
 }

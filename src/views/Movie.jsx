@@ -35,9 +35,16 @@ function Movie() {
                         <EditMovie movie={movie} setShowEdit={setShowEdit} /> :
                         <>
                             <section className="info">
-                                <p><span>Director:</span> {movie.director}</p>
-                                <p><span>Year:</span> {movie.year}</p>
-                                <p><span>My Rating:</span> {movie.rating}</p>
+                                <section className="year-movie-rating">
+                                    <p><span>Director</span> {movie.director}</p>
+                                    <p><span>Year</span> {movie.year}</p>
+                                    <p><span>My Rating</span> {movie.rating}</p>
+                                </section>
+                                {movie.comment &&
+                                    <section className="comment">
+                                        <p>{movie.comment}</p>
+                                    </section>
+                                }
                                 <section className="btn-section">
                                     <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
                                     <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
@@ -45,7 +52,7 @@ function Movie() {
                             </section>
                         </>
                     }
-                </> : 
+                </> :
                 <p className="loading">Loading...</p>
             }
 
