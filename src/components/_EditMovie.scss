@@ -4,6 +4,11 @@
 .edit-movie {
     margin-top: $whiteSpace--big;
 
+    .textarea-container {
+        @include flex-col-center;
+
+    }
+
     .btn-section {
         @include btn-section;
     }

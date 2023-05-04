@@ -28,7 +28,6 @@ function MovieCard({ movie }) {
                     <p>{movie.year}</p>
                     <p>{movie.director}</p>
                     <p> <em>&#9733;</em> {movie.rating}</p>
-                    <p>Comments: {movie.comments.length}</p>
                 </section>
             </section>
         </article>

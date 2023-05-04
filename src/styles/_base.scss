@@ -80,7 +80,7 @@ label {
     text-shadow: $textShadow;
 }
 
-input {
+input, textarea {
     appearance: none;
     border: none;
     padding: $whiteSpace--normal;

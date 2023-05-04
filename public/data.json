@@ -6,12 +6,7 @@
             "director": "Quentin Tarantino",
             "year": "1994",
             "img": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
-            "comments": [
-                {
-                    "date": "2023-02-03",
-                    "body": "Great movie, but I wish Tarantino had put some more depth in Samuel L Jacksons role."
-                }
-            ],
+            "comment": "Great movie, but I wish Tarantino had put some more depth in Samuel L Jacksons role.",
             "rating": 5
         },
         {
@@ -20,12 +15,7 @@
             "director": "Stanley Kubrick",
             "year": "1971",
             "img": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_FMjpg_UX1000_.jpg",
-            "comments": [
-                {
-                    "date": "2023-05-01",
-                    "body": "Great movie, but I wish Tarantino had put some more depth in Samuel L Jacksons role."
-                }
-            ],
+            "comment": "Great movie, but I wish Tarantino had put some more depth in Samuel L Jacksons role.",
             "rating": 4
         },
         {
@@ -34,16 +24,7 @@
             "director": "Sergio Pablos",
             "year": "2019",
             "img": "https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
-            "comments": [
-                {
-                    "date": "2023-05-01",
-                    "body": "Best xmas movie there is."
-                },
-                {
-                    "date": "2023-05-01",
-                    "body": "This is a second comment woth some text inside the body of the comment."
-                }
-            ],
+            "comment": "",
             "rating": 4
         },
         {
@@ -52,16 +33,7 @@
             "director": "Wes Anderson",
             "year": "2009",
             "img": "https://m.media-amazon.com/images/M/MV5BOGUwYTU4NGEtNDM4MS00NDRjLTkwNmQtOTkwMWMyMjhmMjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-            "comments": [
-                {
-                    "date": "2023-05-01",
-                    "body": "Best xmas movie there is."
-                },
-                {
-                    "date": "2023-05-01",
-                    "body": "This is a second comment woth some text inside the body of the comment."
-                }
-            ],
+            "comment":  "Best xmas movie there is.",
             "rating": 4
         }
     ]

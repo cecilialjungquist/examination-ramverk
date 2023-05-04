@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { addMovieComment, deleteMovie, deleteMovieComment } from "../store/slices/moviesSlice";
+import { deleteMovie } from "../store/slices/moviesSlice";
 import { useState } from "react";
 import Button from '../components/Button';
 import EditMovie from "../components/EditMovie";
@@ -13,12 +13,6 @@ function Movie() {
     const [showEdit, setShowEdit] = useState(false);
 
     const [movie] = movies.filter(movie => movie.id.toString() === id);
-    let comments;
-
-    if (movie) {
-        // Fixa id här på ett bättre sätt
-        // comments = movie.comments.map(comment => <Comment comment={comment} key={movie.id + Math.random()} />);
-    }
 
     function handleDelete() {
         dispatch(deleteMovie(movie));
@@ -29,26 +23,6 @@ function Movie() {
     }
     function goBack() {
         navigate(-1);
-    }
-    function addClick() {
-        const newComment = {
-            date: new Date().toLocaleDateString(),
-            body: 'This is an added comment.'
-        }
-
-        console.log(newComment)
-
-        dispatch(addMovieComment({ id: movie.id, newComment }))
-    }
-    function deleteClick() {
-        const newComment = {
-            date: new Date().toLocaleDateString(),
-            body: 'This is an added comment.'
-        }
-
-        console.log(newComment)
-
-        dispatch(deleteMovieComment({ id: movie.id, newComment }))
     }
 
     return (
@@ -64,12 +38,13 @@ function Movie() {
                                 <p><span>Director:</span> {movie.director}</p>
                                 <p><span>Year:</span> {movie.year}</p>
                                 <p><span>My Rating:</span> {movie.rating}</p>
+                                <section className="comment">
+                                    <p>{movie.comment}</p>
+                                </section>
                                 <section className="btn-section">
                                     <Button children={'Delete'} type={'delete'} onClick={handleDelete} />
                                     <Button children={'Edit'} type={'edit'} onClick={handleEdit} />
                                 </section>
-                                <button onClick={addClick}>Add comment</button>
-                                <button onClick={deleteClick}>Delete comment</button>
                             </section>
                         </>
                     }

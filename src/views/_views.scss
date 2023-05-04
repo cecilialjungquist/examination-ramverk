@@ -32,6 +32,19 @@
             font-weight: 400;
         }
 
+        .comment {
+            max-width: 30rem;
+            padding: $whiteSpace--normal;
+
+            p {
+                @include message;
+                background-color: $backgroundDark;
+                padding: $whiteSpace--normal;
+                font-size: 1rem;
+            }
+
+        }
+
     }
     
     .loading {

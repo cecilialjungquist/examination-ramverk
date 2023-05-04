@@ -30,7 +30,6 @@ function EditMovie({ movie, setShowEdit }) {
     return (
         <section className="edit-movie">
             <h4>Edit Movie</h4>
-            {/* <form> */}
             <Input
                 name={'img'}
                 type={'text'}
@@ -43,11 +42,19 @@ function EditMovie({ movie, setShowEdit }) {
                 handleChange={handleChange}
                 value={values.rating}
             />
+            <section className='textarea-container'>
+                <textarea 
+                    name="comment" 
+                    onChange={handleChange}
+                    value={values.comment} 
+                    cols="30" 
+                    rows="10"
+                />
+            </section>
             <section className='btn-section'>
                 <Button children={'Cancel'} type={'delete'} onClick={handleCancel} />
                 <Button children={'Save'} type={'edit'} onClick={handleSave} />
             </section>
-            {/* </form> */}
         </section>
     );
 }
