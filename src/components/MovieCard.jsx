@@ -20,19 +20,21 @@ function MovieCard({ movie }) {
     }
 
     return (
-        <article>
-            <Link to={`/${movie.id}`} state={movie}>
-                <figure>
+        <article className='movie-card'>
+            <figure>
+                <Link to={`/${movie.id}`} state={movie}>
                     <img src={checkSrc(movie.img, true)} alt="Movie poster" />
-                </figure>
-            </Link>
-            <h3>{movie.title}</h3>
-            <section>
-                <p>{movie.year}</p>
-                <p>{movie.director}</p>
-                <p> <em>&#9733;</em> {movie.rating}</p>
+                </Link>
+            </figure>
+            <section className='content'>
+                <h3>{movie.title}</h3>
+                <section>
+                    <p>{movie.year}</p>
+                    <p>{movie.director}</p>
+                    <p> <em>&#9733;</em> {movie.rating}</p>
+                </section>
+                <a href={checkSrc(movie.imdb)} target="_blank">Link to IMDB</a>
             </section>
-            <a href={checkSrc(movie.imdb)} target="_blank">Link to IMDB</a>
         </article>
     );
 }
