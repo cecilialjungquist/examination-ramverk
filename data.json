@@ -1,0 +1,40 @@
+{
+    "movies": [
+        {
+            "id": 0,
+            "title": "Pulp Fiction",
+            "director": "Quentin Tarantino",
+            "year": "1994",
+            "img": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+            "comment": "Great movie!",
+            "rating": 5
+        },
+        {
+            "id": 1,
+            "title": "Clockwork Orange",
+            "director": "Stanley Kubrick",
+            "year": "1971",
+            "img": "https://m.media-amazon.com/images/M/MV5BMTY3MjM1Mzc4N15BMl5BanBnXkFtZTgwODM0NzAxMDE@._V1_FMjpg_UX1000_.jpg",
+            "comment": "You gotta hate and love this movie at the same time.",
+            "rating": 4
+        },
+        {
+            "id": 2,
+            "title": "Klaus",
+            "director": "Sergio Pablos",
+            "year": "2019",
+            "img": "https://m.media-amazon.com/images/M/MV5BMWYwOThjM2ItZGYxNy00NTQwLWFlZWEtM2MzM2Q5MmY3NDU5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+            "comment": "",
+            "rating": 4
+        },
+        {
+            "id": 3,
+            "title": "Fantastic Mr. Fox",
+            "director": "Wes Anderson",
+            "year": "2009",
+            "img": "https://m.media-amazon.com/images/M/MV5BOGUwYTU4NGEtNDM4MS00NDRjLTkwNmQtOTkwMWMyMjhmMjdlXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+            "comment":  "Wes Anderson is the best.",
+            "rating": 4
+        }
+    ]
+}
