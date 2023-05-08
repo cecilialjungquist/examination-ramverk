@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Layout from './views/Layout';
 import Home from './views/Home';
 import AllMovies from './views/AllMovies';
@@ -25,7 +25,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
@@ -35,7 +35,7 @@ function App() {
           <Route path=':id' element={<Movie />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
