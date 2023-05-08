@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './_MovieCard.scss';
-import defaultImage from '../assets/movieposter.svg';
+import defaultImage from '../../public/movieposter.svg';
 
 function MovieCard({ movie }) {
 
